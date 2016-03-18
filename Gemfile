@@ -32,14 +32,21 @@ gem 'jbuilder', '~> 2.0'
 
 gem "sorcery"
 gem 'bootstrap-sass', '~> 3.3.6'
-
+gem 'slim'
+gem 'simple_form'
 
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
-  gem 'byebug'
+  gem 'byebug' 
+end
+
+group :test do
+  # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'rspec-rails'
   gem 'guard-rspec', require: false
+  gem 'factory_girl_rails'
+  gem 'capybara'
 
  
 end
