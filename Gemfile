@@ -4,7 +4,7 @@ ruby '2.2.3'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '>= 5.0.0.beta3', '< 5.1'
 # Use postgresql as the database for Active Record
-gem 'pg', '0.18.4'
+gem 'pg','0.18.4'
 # Use Puma as the app server
 gem 'puma'
 # Use SCSS for stylesheets
@@ -39,6 +39,8 @@ gem 'simple_form'
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug' 
+
+
 end
 
 group :test do
@@ -47,8 +49,10 @@ group :test do
   gem 'guard-rspec', require: false
   gem 'factory_girl_rails'
   gem 'capybara'
-
- 
+  gem 'poltergeist'
+  gem 'selenium'
+  gem 'selenium-webdriver'
+  gem 'database_cleaner'
 end
 
 group :development do
@@ -63,7 +67,6 @@ group :development do
 end
 
 group :production do
-  gem 'pg', '0.18.4'
   gem 'rails_12factor', '0.0.2'
 end
 

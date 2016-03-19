@@ -122,6 +122,18 @@ describe "Click Items" do
 
 
       end
+    end
+
+    describe "Delete bridge"  do
+      before do   
+        item.save
+        visit admin_items_path
+        # click_link "Delete"
+      end
+       
+      it 'requests confirmation' do
+        expect(page).to have_selector "a[data-confirm='Are you sure?'][href='/admin/items/#{item.id}']", text: 'Delete'
+      end
 
     end
 end
