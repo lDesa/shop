@@ -1,0 +1,7 @@
+div class="row row_form"
+  h2 Создание товара
+  = simple_form_for([:admin, @item]) do |f|
+
+    = render partial: 'shared/form_item',  locals: { f:f}
+
+    = f.submit "Создать", class: "btn btn-large btn-success" 

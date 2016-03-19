@@ -1,0 +1,23 @@
+doctype html
+html
+  head
+    title Shop
+    = csrf_meta_tags 
+    = action_cable_meta_tag 
+
+    = stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => 'reload' 
+    = javascript_include_tag 'application', 'data-turbolinks-track' => 'reload' 
+  
+
+  body
+    
+    div class="row"
+      div class="col-sm-3 col-md-2 sidebar"
+        ul class="nav nav-sidebar"
+          li class="active" 
+            = link_to 'Товары',    admin_items_path 
+      div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main"
+        - flash.each do |key,value|
+          div class="alert alert-#{key}"
+             = value
+        = yield 
