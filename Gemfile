@@ -32,7 +32,8 @@ gem 'jbuilder', '~> 2.0'
 
 gem "sorcery"
 gem 'bootstrap-sass', '~> 3.3.6'
-
+gem 'slim'
+gem 'simple_form'
 
 
 group :development, :test do
