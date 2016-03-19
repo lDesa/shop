@@ -7,7 +7,7 @@ class User < ApplicationRecord
 
   validates :email, uniqueness: true
   
-  validates :phone_number,  format: { with: /\A[0-9]{11}\z/}, :allow_blank => true
+  validates :phone_number,  format: { with: /\A[+][0-9][(][0-9]{3}[)][0-9]{3}[-][0-9]{2}[-][0-9]{2}\z/}, :allow_blank => true
   validates :name, length: { maximum: 20 }
   validates :surname, length: { maximum: 30 }
 end
