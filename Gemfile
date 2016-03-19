@@ -49,10 +49,7 @@ group :test do
   gem 'guard-rspec', require: false
   gem 'factory_girl_rails'
   gem 'capybara'
-  gem 'poltergeist'
-  gem 'selenium'
-  gem 'selenium-webdriver'
-  gem 'database_cleaner'
+
 end
 
 group :development do
